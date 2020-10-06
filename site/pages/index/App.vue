@@ -3,12 +3,16 @@
         <site-head></site-head>
         <div class="container flex">
             <site-nav></site-nav>
-            <div class="main flex-1">
-                <site-md class="main__md"></site-md>
-                <div class="main__demo">
-                    <iframe src="/mobile.html" ref="iframe"></iframe>
-                    <!-- <iframe src="https://youzan.github.io/vant/mobile.html#/zh-CN/overlay"></iframe> -->
-                </div>
+            <div class="main flex-1 flex">
+                <site-md class="main__md flex-1"></site-md>
+
+                <template v-if="showMobile">
+                    <div class="main__mobile-occupying"></div>
+                    <div class="main__demo">
+                        <iframe src="/mobile.html" ref="iframe"></iframe>
+                    </div>
+                </template>
+
             </div>
         </div>
     </div>
@@ -28,21 +32,31 @@ export default {
     },
     data () {
         return {
+            showMobile: false,
+            ignoreMobile: ['quickstart', 'intro', 'changelog'],
             active: '',
         }
     },
     watch: {
         '$route'(newVal, oldVal) {
-            this.active = newVal.name.toLowerCase();
-            this.$refs.iframe.src = '/mobile.html/#/' + this.active;
+            this.initActive(newVal);
         }
     },
-    created () {
-
+    mounted() {
+        this.initActive();
     },
     computed: {},
     methods: {
-
+        initActive(_route) {
+            const route = _route || this.$route;
+            this.active = route.name.toLowerCase();
+            this.showMobile = !this.ignoreMobile.includes(this.active);
+            if (this.showMobile) {
+                this.$nextTick(() => {
+                    this.$refs.iframe.src = '/mobile.html/#/' + this.active;
+                })
+            }
+        }
     }
 }
 </script>
@@ -58,8 +72,12 @@ export default {
 
         &__md {
             padding: 0 10px;
-            margin-right: 395px;
         }
+
+        &__mobile-occupying {
+            width: 395px;
+        }
+
         &__demo {
             position: absolute;
             top: 20px;

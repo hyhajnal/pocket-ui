@@ -2,7 +2,7 @@
     Pocket-UI
 </h1>
 
-## 命令
+### 命令
 ``` bash
 # 启动组件
 npm run dev --comp=wall

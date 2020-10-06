@@ -15,7 +15,14 @@ const throttle = function(fn, delay) {
     }
 }
 
+const toCamel = (str) => {
+    let arr = str.split( '-' );
+    if (arr.length === 1) return str.charAt(0).toUpperCase() + str.slice(1);
+    return arr.map(item => item.charAt(0).toUpperCase() + item.slice(1)).join('');
+}
+
 export {
     ViewPortHeight,
     throttle,
+    toCamel
 }

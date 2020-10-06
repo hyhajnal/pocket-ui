@@ -39,7 +39,15 @@ export default {
     },
     computed: {},
     watch: {},
+    mounted() {
+        this.initActive();
+    },
     methods: {
+        initActive(_route) {
+            const route = _route || this.$route;
+            const routeName = route.name;   // 驼峰
+            this.active = routeName.charAt(0).toLowerCase() + routeName.slice(1);
+        },
         onItemCick(item) {
             if (!item.children) {
                 this.active = item.name;

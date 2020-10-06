@@ -11,9 +11,14 @@ export default new Router({
             component: () => import('../../../../src/components/wall/demo/App.vue')
         },
         {
-            path: '/btn',
-            name: 'Btn',
+            path: '/button',
+            name: 'Button',
             component: () => import('../../../../src/components/button/demo/App.vue')
+        },
+        {
+            path: '/listview',
+            name: 'ListView',
+            component: () => import('../../../../src/components/list-view/demo/App.vue')
         }
     ]
 });

@@ -8,13 +8,23 @@
 <script>
 import 'highlight.js/styles/github.css'
 import 'github-markdown-css'
+
+import ChangeLog from '../../../markdown/changelog.md';
+import Intro from '../../../markdown/intro.md';
+import QuickStart from '../../../markdown/quickstart.md';
+
 import Wall from '../../../../src/components/wall/README.md'
 import Button from '../../../../src/components/button/README.md'
+import ListView from '../../../../src/components/list-view/README.md'
 
 export default {
     components: {
+        ChangeLog,
+        Intro,
+        QuickStart,
         Wall,
-        Button
+        Button,
+        ListView,
     },
     data() {
         return {
@@ -23,8 +33,17 @@ export default {
     },
     watch: {
         '$route'(newVal, oldVal) {
-            this.active = newVal.name.chatCodeAt(0).toUpperCase() + newVal.name.slice(1);
+            this.initActive(newVal);
         }
     },
+    mounted() {
+        this.initActive();
+    },
+    methods: {
+        initActive(_route) {
+            const route = _route || this.$route;
+            this.active = route.name;
+        }
+    }
 }
 </script>

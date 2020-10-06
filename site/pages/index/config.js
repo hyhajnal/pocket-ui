@@ -6,12 +6,12 @@ const menus = [
     },
     {
         title: '快速开始',
-        name: 'quickstart',
+        name: 'quickStart',
         path: '../../markdown/quickstart.md'
     },
     {
         title: '更新日志',
-        name: 'changelog',
+        name: 'changeLog',
         path: '../../markdown/changelog.md'
     },
     {
@@ -25,6 +25,11 @@ const menus = [
             {
                 title: '图墙',
                 name: 'wall',
+                path: ''
+            },
+            {
+                title: '列表',
+                name: 'listView',
                 path: ''
             },
         ],

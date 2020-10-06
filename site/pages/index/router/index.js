@@ -7,14 +7,32 @@ export default new Router({
     mode: 'history',
     routes: [
         {
-            path: '/wall',
-            name: 'Wall',
-            component: () => import('../../../../src/components/wall/demo/App.vue')
+            path: '/',
+            redirect: 'intro'
         },
         {
-            path: '/btn',
-            name: 'Btn',
-            component: () => import('../../../../src/components/button/demo/App.vue')
+            path: '/intro',
+            name: 'Intro',
+        },
+        {
+            path: '/changeLog',
+            name: 'ChangeLog'
+        },
+        {
+            path: '/quickStart',
+            name: 'QuickStart'
+        },
+        {
+            path: '/wall',
+            name: 'Wall',
+        },
+        {
+            path: '/button',
+            name: 'Button',
+        },
+        {
+            path: '/listView',
+            name: 'ListView',
         }
     ]
 });
