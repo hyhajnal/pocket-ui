@@ -1,0 +1,18 @@
+{
+  "name": "@pocket/wall",
+  "version": "1.0.0",
+  "description": "图墙组件",
+  "main": "lib/wall.umd.min.js",
+  "scripts": {
+    "serve": "vue serve demo/main.js --open",
+    "build": "vue build -t lib -d lib -n wall src/index.js"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "author": "hajnal",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

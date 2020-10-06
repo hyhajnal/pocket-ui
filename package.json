@@ -1,0 +1,30 @@
+{
+    "name": "pocket-ui",
+    "version": "1.0.0",
+    "description": "a vue ui library",
+    "main": "index.js",
+    "scripts": {
+        "gen": "node scripts/gen",
+        "dev": "vue-cli-service serve",
+        "dev:docs": "vue-cli-service serve",
+        "build:docs": "vue-cli-service build"
+    },
+    "author": "hajnal",
+    "license": "MIT",
+    "dependencies": {
+        "less": "^3.12.2",
+        "less-loader": "^6.2.0",
+        "lib-flexible": "^0.3.2",
+        "normalize.css": "^8.0.1",
+        "postcss-pxtorem": "^5.1.1",
+        "vue": "^2.6.12",
+        "vue-router": "^3.4.3"
+    },
+    "devDependencies": {
+        "@vue/cli-service": "^4.5.4",
+        "github-markdown-css": "^4.0.0",
+        "highlight.js": "^10.2.0",
+        "vue-markdown-loader": "^2.4.1",
+        "vue-template-compiler": "^2.6.12"
+    }
+}
