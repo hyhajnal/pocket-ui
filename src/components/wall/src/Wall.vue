@@ -5,7 +5,7 @@
 <script>
 
 export default {
-    name: 'Wall',
+    name: 'PocWall',
     components: {},
     data () {
         return {

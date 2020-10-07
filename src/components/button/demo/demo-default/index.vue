@@ -1,5 +1,5 @@
 <template>
-    <Button></Button>
+    <poc-button></poc-button>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-    <ListView></ListView>
+    <poc-list-view></poc-list-view>
 </template>
 
 <script>

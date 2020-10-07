@@ -4,7 +4,7 @@ const npmScript = process.env.npm_lifecycle_event;
 const isDocs = npmScript.includes('docs');
 
 const docsConfig = {
-    publicPath: './',
+    publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
     pages: {
         index: {
             entry: 'site/pages/index/main.js',

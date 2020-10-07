@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: 'Button',
+    name: 'PocButton',
     data () {
         return {};
     },

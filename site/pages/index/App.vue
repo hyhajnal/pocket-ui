@@ -23,6 +23,8 @@ import SiteHead from './components/SiteHead';
 import SiteNav from './components/SiteNav';
 import SiteMd from './components/SiteMd';
 
+const mobilePrefix = process.env.NODE_ENV === 'production' ? './' : '/';
+
 export default {
     name: 'App',
     components: {
@@ -53,7 +55,7 @@ export default {
             this.showMobile = !this.ignoreMobile.includes(this.active);
             if (this.showMobile) {
                 this.$nextTick(() => {
-                    this.$refs.iframe.src = '/mobile.html/#/' + this.active;
+                    this.$refs.iframe.src = mobilePrefix + 'mobile.html/#/' + this.active;
                 })
             }
         }

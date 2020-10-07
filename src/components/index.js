@@ -1,7 +1,9 @@
 import Wall from './wall/src';
-import ExampleComp from './example-comp/src';
+import Button from './button/src';
+import ListView from './list-view/src'
 
 export default [
     Wall,
-    ExampleComp,
+    Button,
+    ListView,
 ]

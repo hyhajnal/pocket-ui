@@ -1,5 +1,5 @@
 <template>
-    <Wall></Wall>
+    <poc-wall></poc-wall>
 </template>
 
 <script>

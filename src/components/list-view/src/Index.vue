@@ -21,7 +21,7 @@ import { ViewPortHeight, throttle } from '../../../../utils';
  * 4. 功能：下拉加载/上拉刷新、占位图、预渲染几屏数据、点击加载更多、单选/多选、tabs组合（记住滚动条位置）
  */
 export default {
-    name: 'ListView',
+    name: 'PocListView',
     data () {
         const itemHeight = 60;
         const bufferCount = 5;  // 缓冲区：上下多加载5个
