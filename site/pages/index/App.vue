@@ -55,7 +55,7 @@ export default {
             this.showMobile = !this.ignoreMobile.includes(this.active);
             if (this.showMobile) {
                 this.$nextTick(() => {
-                    this.$refs.iframe.src = mobilePrefix + 'mobile.html/#/' + this.active;
+                    this.$refs.iframe.src = mobilePrefix + 'mobile.html#/' + this.active;
                 })
             }
         }
