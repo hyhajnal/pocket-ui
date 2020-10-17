@@ -34,7 +34,7 @@ export default {
     },
     data () {
         return {
-            showMobile: false,
+            showMobile: true,
             ignoreMobile: ['quickstart', 'intro', 'changelog'],
             active: '',
         }
@@ -52,12 +52,11 @@ export default {
         initActive(_route) {
             const route = _route || this.$route;
             this.active = route.name.toLowerCase();
-            this.showMobile = !this.ignoreMobile.includes(this.active);
-            if (this.showMobile) {
-                this.$nextTick(() => {
-                    this.$refs.iframe.src = mobilePrefix + 'mobile.html#/' + this.active;
-                })
-            }
+            const isCompRouter = !this.ignoreMobile.includes(this.active);
+            const iframeSrc = isCompRouter ? (mobilePrefix + 'mobile.html#/' + this.active) : (mobilePrefix + 'mobile.html');
+            this.$nextTick(() => {
+                this.$refs.iframe.src = iframeSrc;
+            })
         }
     }
 }
@@ -81,6 +80,7 @@ export default {
         }
 
         &__demo {
+            transform: scale(.9);
             position: absolute;
             top: 20px;
             right: 20px;

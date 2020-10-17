@@ -18,5 +18,11 @@ requireFiles.keys().forEach(key => {
 })
 
 export default new Router({
-    routes: components
+    routes: [
+        {
+            path: '/',
+            name: 'Home',
+            component: () => import('../Home.vue')
+        }
+    ].concat(components)
 });
