@@ -64,6 +64,10 @@ export default {
 
 <style lang='less' scoped>
 .Site {
+    /deep/ .markdown-body pre {
+        width: 600px;
+        height: 300px;
+    }
 
     .main {
         padding: 20px;
