@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: 'ExampleComp',
+    name: 'PocExampleComp',
     data () {
         return {};
     },

@@ -32,6 +32,11 @@ const menus = [
                 name: 'listView',
                 path: ''
             },
+            {
+                title: '视频',
+                name: 'video',
+                path: ''
+            },
         ],
     },
     {

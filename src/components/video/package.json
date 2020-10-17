@@ -1,0 +1,18 @@
+{
+  "name": "@pocket/video",
+  "version": "1.0.0",
+  "description": "示例组件",
+  "main": "lib/video.umd.min.js",
+  "scripts": {
+    "serve": "vue-cli-service serve demo/main.js --open",
+    "build": "vue-cli-service build -t lib -d lib -n video src/index.js"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "author": "hajnal",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

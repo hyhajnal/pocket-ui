@@ -16,6 +16,7 @@ import QuickStart from '../../../markdown/quickstart.md';
 import Wall from '../../../../src/components/wall/README.md'
 import Button from '../../../../src/components/button/README.md'
 import ListView from '../../../../src/components/list-view/README.md'
+import Video from '../../../../src/components/video/README.md'
 
 export default {
     components: {
@@ -25,6 +26,7 @@ export default {
         Wall,
         Button,
         ListView,
+        Video,
     },
     data() {
         return {

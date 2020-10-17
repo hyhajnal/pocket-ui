@@ -8,7 +8,7 @@ const docsConfig = {
     pages: {
         index: {
             entry: 'site/pages/index/main.js',
-            template: 'site/pages/mobile/index.html',
+            template: 'site/pages/index/index.html',
             filename: 'index.html',
             title: 'PocketUI',
         },

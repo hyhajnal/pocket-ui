@@ -1,5 +1,5 @@
 <template>
-    <ExampleComp></ExampleComp>
+    <poc-example-comp></poc-example-comp>
 </template>
 
 <script>

@@ -19,6 +19,11 @@ export default new Router({
             path: '/listview',
             name: 'ListView',
             component: () => import('../../../../src/components/list-view/demo/App.vue')
+        },
+        {
+            path: '/video',
+            name: 'Video',
+            component: () => import('../../../../src/components/video/demo/App.vue')
         }
     ]
 });

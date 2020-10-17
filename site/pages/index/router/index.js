@@ -33,6 +33,10 @@ export default new Router({
         {
             path: '/listView',
             name: 'ListView',
+        },
+        {
+            path: '/video',
+            name: 'Video',
         }
     ]
 });
