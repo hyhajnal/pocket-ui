@@ -8,7 +8,8 @@ requireFiles.keys().forEach(key => {
     const name = info.name.replace('@pocket/', '')
     components.push({
         title: info.description,
-        name: lowerInitial(toCamel(name))
+        name: lowerInitial(toCamel(name)),
+        compName: toCamel(name),
     })
 })
 

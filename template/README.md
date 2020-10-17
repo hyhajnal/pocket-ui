@@ -1,4 +1,4 @@
-# ExampleComp 示例组件
+# ExampleComp 示例
 这是一个示例组件
 
 ### 示例

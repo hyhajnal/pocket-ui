@@ -13,7 +13,7 @@
                         :class="{'nav-item--active': active === item.name, 'nav-item--leaf': !item.children}"
                         @click="onItemCick(item)"
                     >
-                        {{ item.title }}
+                        {{item.compName}}<span class="nav-item__desc">{{item.title}}</span>
                     </div>
                 </div>
             </template>
@@ -73,6 +73,12 @@ export default {
         height: 40px;
         line-height: 40px;
         padding: 0 40px;
+
+        &__desc {
+            font-size: 12px;
+            opacity: .67;
+            margin-left: 8px;
+        }
 
         &--active {
             background: #f9f0ff;

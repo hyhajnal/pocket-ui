@@ -1,4 +1,4 @@
-# Button 按钮组件
+# Button 按钮
 这是一个button组件
 
 ### 示例
