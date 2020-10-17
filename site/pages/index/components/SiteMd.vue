@@ -8,26 +8,26 @@
 <script>
 import 'highlight.js/styles/github.css'
 import 'github-markdown-css'
+import { toCamel, lowerInitial } from '../../../../utils';
 
 import ChangeLog from '../../../markdown/changelog.md';
 import Intro from '../../../markdown/intro.md';
 import QuickStart from '../../../markdown/quickstart.md';
 
-import Wall from '../../../../src/components/wall/README.md'
-import Button from '../../../../src/components/button/README.md'
-import ListView from '../../../../src/components/list-view/README.md'
-import Video from '../../../../src/components/video/README.md'
+const requireFiles = require.context('../../../../src/components', true, /\.json/)
+const components = {
+    ChangeLog, Intro, QuickStart
+}
+
+requireFiles.keys().forEach(key => {
+    const info = requireFiles(key)
+    const name = info.name.replace('@pocket/', '')
+    components[toCamel(name)] = () => import(`../../../../src/components/${name}/README.md`)
+    // Vue.component(toCamel(name), () => import(`../../../../src/components/${name}/README.md`))
+})
 
 export default {
-    components: {
-        ChangeLog,
-        Intro,
-        QuickStart,
-        Wall,
-        Button,
-        ListView,
-        Video,
-    },
+    components,
     data() {
         return {
             active: '',

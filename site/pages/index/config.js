@@ -1,3 +1,17 @@
+import { toCamel, lowerInitial } from '../../../utils';
+
+const requireFiles = require.context('../../../src/components', true, /\.json/)
+const components = []
+
+requireFiles.keys().forEach(key => {
+    const info = requireFiles(key)
+    const name = info.name.replace('@pocket/', '')
+    components.push({
+        title: info.description,
+        name: lowerInitial(toCamel(name))
+    })
+})
+
 const menus = [
     {
         title: '介绍',
@@ -16,28 +30,7 @@ const menus = [
     },
     {
         title: '基础组件',
-        children: [
-            {
-                title: '按钮',
-                name: 'button',
-                path: ''
-            },
-            {
-                title: '图墙',
-                name: 'wall',
-                path: ''
-            },
-            {
-                title: '列表',
-                name: 'listView',
-                path: ''
-            },
-            {
-                title: '视频',
-                name: 'video',
-                path: ''
-            },
-        ],
+        children: components
     },
     {
         title: '指令',

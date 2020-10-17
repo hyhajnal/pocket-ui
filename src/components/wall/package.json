@@ -1,7 +1,7 @@
 {
   "name": "@pocket/wall",
   "version": "1.0.0",
-  "description": "图墙组件",
+  "description": "图墙",
   "main": "lib/wall.umd.min.js",
   "scripts": {
     "serve": "vue serve demo/main.js --open",

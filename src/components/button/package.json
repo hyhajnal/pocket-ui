@@ -1,7 +1,7 @@
 {
   "name": "@pocket/button",
   "version": "1.0.0",
-  "description": "示例组件",
+  "description": "按钮",
   "main": "lib/button.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve demo/main.js --open",

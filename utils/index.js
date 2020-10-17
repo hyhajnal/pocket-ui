@@ -21,8 +21,14 @@ const toCamel = (str) => {
     return arr.map(item => item.charAt(0).toUpperCase() + item.slice(1)).join('');
 }
 
+// 首字母小写
+const lowerInitial = (str) => {
+    return str.charAt(0).toLowerCase() + str.slice(1)
+}
+
 export {
     ViewPortHeight,
     throttle,
-    toCamel
+    toCamel,
+    lowerInitial
 }

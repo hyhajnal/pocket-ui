@@ -71,6 +71,7 @@
     margin-bottom: 10px;
 
     .btn {
+        cursor: pointer;
         width: 80px;
         height: 30px;
         text-align: center;
