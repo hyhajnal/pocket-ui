@@ -15,8 +15,6 @@ requireFiles.keys().forEach(key => {
     })
 })
 
-console.log(components)
-
 Vue.use(Router);
 
 export default new Router({
