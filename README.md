@@ -1,10 +1,10 @@
 <h1 align="center">
-    Pocket-UI
+    Pocket-UI 📮
 </h1>
 
 ### 文档
 * 文档站点：https://hyhajnal.github.io/pocket-ui
-* [组件库开发总结](https://www.yuque.com/docs/share/aa6c6e47-4e96-46ed-b164-756616afd2bf)
+* [从0到1实现一个Vue组件库](https://www.yuque.com/docs/share/aa6c6e47-4e96-46ed-b164-756616afd2bf)
 * DEMO 预览
 
 <div style="width:100%;text-align:center;">
