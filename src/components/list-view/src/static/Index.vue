@@ -10,7 +10,7 @@
 
 <script>
 
-import { ViewPortHeight, throttle } from '../../../../utils';
+import { ViewPortHeight, throttle } from '../../../../../utils';
 
 
 /**

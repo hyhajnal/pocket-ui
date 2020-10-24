@@ -1,4 +1,5 @@
-import ListView from './Index.vue';
+// import ListView from './static/Index';
+import ListView from './dynamic/Index';
 
 ListView.install = (Vue) => {
     Vue.component(ListView.name, ListView);
