@@ -23,7 +23,7 @@ import { ViewPortHeight, throttle } from '../../../../utils';
 export default {
     name: 'PocListView',
     data () {
-        const itemHeight = 60;
+        const itemHeight = 60;  // 40(height) + 20(margin-bottom)
         const bufferCount = 5;  // 缓冲区：上下多加载5个
         const viewCount = Math.ceil(ViewPortHeight / itemHeight);
         return {
@@ -51,12 +51,19 @@ export default {
         handleScroll() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 
-            this.startIndex = Math.max(Math.round(scrollTop / this.itemHeight) - this.bufferCount, 0);
-            this.endIndex = Math.min(this.startIndex + this.viewCount + this.bufferCount, this.list.length - 1);
-            this.viewList = this.list.slice(this.startIndex, this.endIndex);
+            const originStartIndex = Math.round(scrollTop / this.itemHeight);
+            const originEndIndex = originStartIndex + this.viewCount
 
-            this.startOffset = scrollTop;
-            this.endOffset = (this.list.length - this.endIndex) * this.itemHeight;
+            // 往后/往前加上5个buffer
+            this.startIndex = Math.max(originStartIndex - this.bufferCount, 0);
+            this.endIndex = Math.min(originEndIndex + this.bufferCount, this.list.length - 1);
+
+            // 取startIndex-endIndex的元素，这边endIndex需要+1，因为 slice 是 [startIndex, endIndex)，不然最后一个元素取不到
+            this.viewList = this.list.slice(this.startIndex, this.endIndex + 1);
+            
+            // 注意这边如果startOffset=scrollTop会抖动
+            this.startOffset = this.startIndex * this.itemHeight;
+            this.endOffset = ((this.list.length - 1) - this.endIndex) * this.itemHeight;
         }
     },
 }
